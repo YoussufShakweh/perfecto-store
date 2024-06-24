@@ -32,6 +32,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path("__debug__/", include("debug_toolbar.urls")),
     path(
         "swagger<format>/",
         schema_view.without_ui(),
